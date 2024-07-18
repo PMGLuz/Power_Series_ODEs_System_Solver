@@ -3,10 +3,8 @@ This mathematica package solves a family of systems of linear ODEs with an isola
 
 
 Given a system of ordinary differential equations in a single variable of the form:
-```
-$$
+```math
 \frac{d \mathsf{W}}{dx} = \left(\frac{1}{x} \mathrm{R} + \Theta \right) \mathsf{W}\,,
-$$
 ```
 where $\mathrm{R}$ is a constant matrix and $\Theta$ is an analytic matrix, this package finds the intermediate matrices for the solutions using a power series expansion, around the singular point.
 The method can be found in chapter 4 of E. A. Coddington and N. Levinson, *Theory of ordinary differential equations* (McGraw-Hill, New York, 1955) or chapter 6.2 of E. A. Coddington an R. Carlson, *Linear Ordinary Differential Equations* (Society for Industrial and Applied Mathematics, Philadelphia, 1997).
