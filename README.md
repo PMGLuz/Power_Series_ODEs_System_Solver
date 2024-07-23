@@ -1,4 +1,4 @@
-# Singular_ODEs_System_Solver
+# Power_Series_ODEs_System_Solver
 This mathematica package solves a family of systems of linear ODEs with an isolated singular point of the first kind, finding solutions in a power series form around the singular point.
 
 
@@ -13,4 +13,4 @@ The general solutions are of the form
 ```
 The method can be found in chapter 4 of E. A. Coddington and N. Levinson, *Theory of ordinary differential equations* (McGraw-Hill, New York, 1955) or chapter 6.2 of E. A. Coddington an R. Carlson, *Linear Ordinary Differential Equations* (Society for Industrial and Applied Mathematics, Philadelphia, 1997).
 
-A mathematical notebook with examples is provided. Some of the provided examples show how the method can be used to find the analytical eigenfunctions of the radial perturbations of static, spherically symmetric spacetimes in the theory of General Relativity.   
+A mathematical notebook with examples is provided. Some of the provided examples show how the method can be used to find the analytical eigenfunctions of the radial perturbations of static, spherically symmetric spacetimes in the theory of General Relativity.
