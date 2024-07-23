@@ -112,10 +112,6 @@ Method EDOSystemReducer has two implementations.
 Since it uses recurrence, the first call TUMatrix is just the identity matrix.
 The next calls TUMatrix must be specified. To avoid to have the user to provide the identity matrix, we have two implementations.
 **)
-(***
-Generalize: The U matrix should be multiplied  in the space of same eigenvalue, not just the first!
-The method should only apply the transformation to the spaces associated with eigenvalues that differ by and integer, not to all eigenvalues!
-***)
 
 ODESystemReducerGeneral[RMatrix_, \[CapitalTheta]Matrix_, parametrizationVariable_Symbol, SIMPLIFYTIMECONSTRAINT_:300] := Block[{U, InvU, Uprime, T, InvT, ExpansionOrder,
 	tempSMatrix, transformed\[CapitalTheta]Matrix, tempTUMatrix,
@@ -170,7 +166,6 @@ ODESystemReducerGeneral[RMatrix_, \[CapitalTheta]Matrix_, parametrizationVariabl
 		TimeConstraint->SIMPLIFYTIMECONSTRAINT
 	];
 	
-	(*transformed\[CapitalTheta]Matrix=transformed\[CapitalTheta]Matrix-temp//Simplify;*)
 	transformed\[CapitalTheta]Matrix=Simplify[InvU . InvT . \[CapitalTheta]Matrix . T . U-temp, TimeConstraint->SIMPLIFYTIMECONSTRAINT];
 	
 	{tempSMatrix,transformed\[CapitalTheta]Matrix,tempTUMatrix}=ODESystemReducerGeneral[tempSMatrix, transformed\[CapitalTheta]Matrix, TUMatrix . T . U, r]
@@ -230,7 +225,6 @@ ODESystemReducerGeneral[RMatrix_, \[CapitalTheta]Matrix_, TUMatrix_, parametriza
 		TimeConstraint->SIMPLIFYTIMECONSTRAINT
 	];
 	
-	(*transformed\[CapitalTheta]Matrix=transformed\[CapitalTheta]Matrix-temp//Simplify;*)
 	transformed\[CapitalTheta]Matrix=Simplify[InvU . InvT . \[CapitalTheta]Matrix . T . U-temp,TimeConstraint->SIMPLIFYTIMECONSTRAINT];
 	
 	{tempSMatrix,transformed\[CapitalTheta]Matrix,tempTUMatrix}=ODESystemReducerGeneral[tempSMatrix, transformed\[CapitalTheta]Matrix, TUMatrix . T . U, r]
@@ -242,10 +236,6 @@ Method EDOSystemReducer has two implementations.
 Since it uses recurrence, the first call TUMatrix is just the identity matrix.
 The next calls TUMatrix must be specified. To avoid to have the user to provide the identity matrix, we have two implementations.
 **)
-
-(***
-Generalize: The U matrix should be multiplied  in the space of same eigenvalue, not just the first!
-***)
 
 
 
@@ -303,7 +293,6 @@ ODESystemReducerInteger[RMatrix_, \[CapitalTheta]Matrix_, parametrizationVariabl
 		TimeConstraint->SIMPLIFYTIMECONSTRAINT
 	];
 	
-	(*transformed\[CapitalTheta]Matrix=transformed\[CapitalTheta]Matrix-temp//Simplify;*)
 	transformed\[CapitalTheta]Matrix=Simplify[InvU . InvT . \[CapitalTheta]Matrix . T . U-temp, TimeConstraint->SIMPLIFYTIMECONSTRAINT];
 	
 	{tempSMatrix,transformed\[CapitalTheta]Matrix,tempTUMatrix}=ODESystemReducerInteger[tempSMatrix, transformed\[CapitalTheta]Matrix, TUMatrix . T . U, r]
