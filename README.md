@@ -1,5 +1,5 @@
 # Power_Series_ODEs_System_Solver
-This mathematica package solves a family of systems of linear ODEs with an isolated singular point of the first kind, finding solutions in a power series form around the singular point.
+The Mathematica package solves a family of systems of linear ODEs with an isolated singular point of the first kind, finding solutions in a power series form around the singular point.
 
 
 Let a system of $n$ ordinary differential equations for n unknowns of the form:
