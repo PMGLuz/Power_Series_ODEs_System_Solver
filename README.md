@@ -6,7 +6,7 @@ Let a system of $n$ ordinary differential equations for n unknowns of the form:
 ```math
 \frac{d \mathsf{W}}{dx} = \left(\frac{1}{x} \mathrm{R} + \Theta \right) \mathsf{W}\,,
 ```
-where $\mathrm{R}$ is a constant matrix $n\times n$ real matrix, and $\Theta$ is a $n\times n$ real analytic matrix around $x=0$. If $\mathrm{R}$ has only real eigenvalues, this package finds the intermediate matrices for the solutions using a power series expansion, around the singular point.
+where $\mathrm{R}$ is a constant $n\times n$ real matrix, and $\Theta$ is a $n\times n$ real analytic matrix around $x=0$. If $\mathrm{R}$ has only real eigenvalues, this package finds the intermediate matrices for the solutions using a power series expansion, around the singular point.
 The general solutions, up to integration constants, are of the form
 ```math
  SolutionsMatrix(x) = TUMatrix.PMatrix.x^{SMatrix}\,.
